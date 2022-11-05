@@ -79,7 +79,10 @@
       },
       "configurations": {
         "coverage": {
-          "codeCoverage": true
+          "codeCoverage": true,
+          "coverageReporters": [
+            "json"
+          ]
         }
       }
     }
