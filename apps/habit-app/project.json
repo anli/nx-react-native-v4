@@ -85,6 +85,14 @@
           ]
         }
       }
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "tsc -b",
+        "cwd": "apps/habit-app"
+      }
     }
   },
   "tags": []
