@@ -93,6 +93,14 @@
         "command": "tsc -b",
         "cwd": "apps/habit-app"
       }
+    },
+    "pod-install": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "pod install",
+        "cwd": "apps/habit-app/ios"
+      }
     }
   },
   "tags": []
