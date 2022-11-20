@@ -1,10 +1,11 @@
 module.exports = {
   displayName: 'habit-app',
-  preset: 'react-native',
-  resolver: '@nrwl/jest/plugins/resolver',
   moduleFileExtensions: ['ts', 'js', 'html', 'tsx', 'jsx'],
-  setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
   moduleNameMapper: {
     '.svg': '@nrwl/react-native/plugins/jest/svg-mock'
-  }
+  },
+  preset: 'react-native',
+  resolver: '@nrwl/jest/plugins/resolver',
+  setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
+  transformIgnorePatterns: ['node_modules/(?!(jest-)?react-native|@react-native-community|@react-native|@react-navigation)']
 }
