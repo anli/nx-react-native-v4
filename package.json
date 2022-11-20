@@ -16,14 +16,14 @@
   },
   "private": true,
   "devDependencies": {
-    "@nrwl/cli": "15.0.10",
-    "@nrwl/detox": "15.0.10",
-    "@nrwl/eslint-plugin-nx": "15.0.10",
-    "@nrwl/jest": "15.0.10",
-    "@nrwl/linter": "15.0.10",
-    "@nrwl/react-native": "15.0.10",
-    "@nrwl/web": "15.0.10",
-    "@nrwl/workspace": "15.0.10",
+    "@nrwl/cli": "15.2.1",
+    "@nrwl/detox": "15.2.1",
+    "@nrwl/eslint-plugin-nx": "15.2.1",
+    "@nrwl/jest": "15.2.1",
+    "@nrwl/linter": "15.2.1",
+    "@nrwl/react-native": "15.2.1",
+    "@nrwl/web": "15.2.1",
+    "@nrwl/workspace": "15.2.1",
     "@react-native-async-storage/async-storage": "1.17.10",
     "@react-native-community/cli": "9.1.1",
     "@react-native-community/cli-platform-android": "9.1.0",
@@ -56,7 +56,7 @@
     "metro-react-native-babel-preset": "0.72.3",
     "metro-react-native-babel-transformer": "0.72.3",
     "metro-resolver": "0.72.3",
-    "nx": "15.0.10",
+    "nx": "15.2.1",
     "nyc": "^15.1.0",
     "prettier": "^2.6.2",
     "react-native-config": "1.4.6",
@@ -73,3 +73,4 @@
     "tslib": "^2.3.0"
   }
 }
+
