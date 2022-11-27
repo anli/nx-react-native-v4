@@ -1,26 +1,21 @@
-import { Screen, Text, ThemeProvider, View } from '@nx-react-native/shared/ui'
+import { ThemeProvider } from '@nx-react-native/shared/ui'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React from 'react'
+import { AppTabs } from './components'
 
-const HomeScreen = (): React.ReactElement => {
-  return (
-    <Screen>
-      <View marginTop="space-4">
-        <Text>Welcome</Text>
-      </View>
-    </Screen>
-  )
-}
-
-const Stack = createNativeStackNavigator()
+const RootStack = createNativeStackNavigator()
 
 export const App = (): React.ReactElement => (
   <ThemeProvider>
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
+      <RootStack.Navigator>
+        <RootStack.Screen
+          name="AppTabs"
+          component={AppTabs}
+          options={{ headerShown: false }}
+        />
+      </RootStack.Navigator>
     </NavigationContainer>
   </ThemeProvider>
 )
