@@ -16,6 +16,8 @@
     "react-native-screens": "*",
     "react-native-svg": "*",
     "@shopify/restyle": "*",
-    "@shopify/polaris-tokens": "*"
+    "@shopify/polaris-tokens": "*",
+    "@react-navigation/bottom-tabs": "*",
+    "react-native-vector-icons": "*"
   }
 }
