@@ -1,7 +1,7 @@
 import React from 'react'
 import { SafeAreaView, Text } from 'react-native'
 
-const App = () => {
+const App = (): React.ReactElement => {
   return (
     <SafeAreaView>
       <Text>Welcome</Text>
