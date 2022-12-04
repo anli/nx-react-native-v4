@@ -90,6 +90,14 @@
         "command": "tsc -b",
         "cwd": "apps/board-game-app"
       }
+    },
+    "pod-install": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "pod install",
+        "cwd": "apps/board-game-app/ios"
+      }
     }
   },
   "tags": []
