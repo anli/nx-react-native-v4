@@ -110,3 +110,4 @@ apps/habit-app-e2e/artifacts
 .gitsecret/keys/random_seed
 !*.secret
 **/.env
+apps/board-game-app-e2e/artifacts

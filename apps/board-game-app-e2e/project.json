@@ -1,0 +1,87 @@
+{
+  "name": "board-game-app-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/board-game-app-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "build-ios": {
+      "executor": "@nrwl/detox:build",
+      "options": {
+        "detoxConfiguration": "ios.sim.debug"
+      },
+      "configurations": {
+        "production": {
+          "detoxConfiguration": "ios.sim.release"
+        }
+      }
+    },
+    "test-ios": {
+      "executor": "@nrwl/detox:test",
+      "options": {
+        "detoxConfiguration": "ios.sim.debug",
+        "buildTarget": "board-game-app-e2e:build-ios"
+      },
+      "configurations": {
+        "production": {
+          "detoxConfiguration": "ios.sim.release",
+          "buildTarget": "board-game-app-e2e:build-ios:production"
+        }
+      }
+    },
+    "build-android": {
+      "executor": "@nrwl/detox:build",
+      "options": {
+        "detoxConfiguration": "android.emu.debug"
+      },
+      "configurations": {
+        "production": {
+          "detoxConfiguration": "android.emu.release"
+        }
+      }
+    },
+    "test-android": {
+      "executor": "@nrwl/detox:test",
+      "options": {
+        "detoxConfiguration": "android.emu.debug",
+        "buildTarget": "board-game-app-e2e:build-ios"
+      },
+      "configurations": {
+        "production": {
+          "detoxConfiguration": "android.emu.release",
+          "buildTarget": "board-game-app-e2e:build-ios:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/board-game-app-e2e/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "tsc -b",
+        "cwd": "apps/board-game-app-e2e"
+      }
+    },
+    "pod-install": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "pod install",
+        "cwd": "apps/board-game-app/ios"
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": [
+    "board-game-app"
+  ]
+}
