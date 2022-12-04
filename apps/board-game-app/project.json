@@ -82,6 +82,14 @@
           "codeCoverage": true
         }
       }
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "tsc -b",
+        "cwd": "apps/board-game-app"
+      }
     }
   },
   "tags": []
